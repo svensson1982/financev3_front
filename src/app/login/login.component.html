@@ -1,0 +1,35 @@
+<div class="container margin-top-50">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            <span>Login</span>
+          </mat-toolbar-row>
+        </mat-toolbar>
+  
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+          </mat-card-header>
+  
+          <mat-card-content>
+            <div class="example-container">
+              <mat-form-field>
+                <input matInput placeholder="Enter your email" required>
+                <!-- [formControl]="email" -->
+                <!--<mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="accent" (click)="onSubmit()">Login</button>
+            <!--<button mat-raised-button color="accent">SHARE</button>-->
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
